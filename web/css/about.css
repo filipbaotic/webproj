@@ -1,0 +1,57 @@
+/* COLORS */
+#about {
+    background-color: #f0fde2;
+}
+
+.container-about .left {
+    grid-column-start: 1;
+    grid-column-end: 5;
+    margin-bottom: 20px;
+}
+.container-about .right {
+    grid-column-start: 7;
+    grid-column-end: 13;
+}
+.container-about .pattern {
+    position: relative;
+    display: flex;
+}
+.container-about .pattern img {
+    z-index: 1;
+}
+.container-about .pattern::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 32.65%;
+    left: 36.73%;
+    background-image: url(/assets/about-pattern.svg);
+    background-size: cover;
+    background-position: right bottom;
+    z-index: 0;
+}
+
+.about-button-spacing {
+    margin: 36px 0 40px;
+}
+
+.map {
+    position: relative;
+    margin-top: 40px;
+    width: calc(50vw - 10px);
+    height: calc(100% - 40px);
+    background-image: url(/assets/map.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-color: #f7fef1;
+}
+.map::before {
+    content: "";
+    position: absolute;
+    width: 24px;
+    height: 32px;
+    background-image: url(/assets/pin.svg);
+    top: calc(50% - 32px);
+    left: calc(50% - 12px);
+}

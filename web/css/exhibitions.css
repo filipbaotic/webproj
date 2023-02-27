@@ -1,0 +1,49 @@
+#exhibitions {
+    background-color: #efe2fd;
+    color: #30075f;
+}
+
+.exhibition {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 24px;
+    grid-column-start: 1;
+    grid-column-end: 13;
+    align-items: end;
+    padding: 16px 0;
+    border-bottom: 1px solid #9e54f3;
+}
+.exhibition:first-of-type {
+    font-weight: 600;
+}
+.exhibition.past {
+    color: rgba(48, 7, 95, 0.5);
+}
+.exhibition.past a.button {
+    display: none;
+}
+
+.column-date {
+    justify-content: flex-end;
+    align-items: flex-start;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+.column-author {
+    justify-content: flex-end;
+    align-items: flex-start;
+    grid-column-start: 4;
+    grid-column-end: 10;
+}
+.column-author_artist {
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 56px;
+}
+.column-tickets {
+    text-align: right;
+    justify-content: flex-end;
+    align-items: flex-end;
+    grid-column-start: 10;
+    grid-column-end: 13;
+}

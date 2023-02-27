@@ -1,0 +1,53 @@
+@import 'colors';
+
+#exhibitions {
+    background-color: $amethyst-10;
+    color: $amethyst-90;
+}
+
+.exhibition {
+    &:first-of-type {
+        font-weight: 600;
+    }
+    &.past {
+        color: $amethyst-90-disabled;
+        & a.button {
+            display: none;
+        }
+    }
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 24px;
+    grid-column-start: 1;
+    grid-column-end: 13;
+    align-items: end;
+    padding: 16px 0;
+    border-bottom: 1px solid $amethyst-50;
+}
+
+.column {
+    &-date {
+        justify-content: flex-end;
+        align-items: flex-start;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    &-author {
+        justify-content: flex-end;
+        align-items: flex-start;
+        grid-column-start: 4;
+        grid-column-end: 10;
+        &_artist {
+            font-weight: 300;
+            font-size: 48px;
+            line-height: 56px;
+        }
+    }
+    &-tickets {
+        text-align: right;
+        justify-content: flex-end;
+        align-items: flex-end;
+        grid-column-start: 10;
+        grid-column-end: 13;
+    }
+}

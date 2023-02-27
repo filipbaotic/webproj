@@ -1,0 +1,23 @@
+@import 'colors';
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 32px;
+    width: 1280px;
+    padding: 80px 32px;
+    z-index: 1;
+}
+
+#hero,
+#exhibitions,
+#about,
+#news,
+#footer, 
+#login {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

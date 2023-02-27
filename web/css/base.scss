@@ -1,0 +1,215 @@
+@import 'colors';
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: $neutral-90;
+    scroll-behavior: smooth;
+}
+
+a {
+    color: $blue-90;
+    position: relative;
+    text-decoration: none;
+    &::before, .nav &.active::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 1px;
+        bottom: -2px;
+        left: 0;
+        background-color: $blue-90;
+        transform-origin: bottom right;
+        transition: transform 0.3s ease-out;
+    }
+    &:hover::before, .nav &.active::before  {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
+
+img{
+    max-width: 100%;
+}
+
+a.button{
+    position: relative;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    font-feature-settings: 'case' on, 'calt' off;
+    margin-right: 28px;
+    &.small{
+        font-size: 16px;
+        line-height: 20px;
+        letter-spacing: 0em;
+    }
+    &::before{
+        display: none;
+    }
+    &::after{
+        position: absolute;
+        content: ' →';
+        font-family: 'Aeonik', sans-serif;
+        font-weight: 500;
+        padding-left: 8px;
+        transition-duration: .4s;
+    }
+    &:hover::after{
+        padding-left: 20px;
+    }
+    #hero &{
+        color: $orange-10;
+    }
+    #exhibitions &{
+        font-weight: 400;
+        color: $amethyst-90;
+        &::after{
+            font-weight: 400;
+        }
+    }
+    #about &{
+        color: $green-90;
+    }
+    #news &{
+        color: $blue-90;
+    }
+}
+
+p{
+    margin-top: 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    padding: 0;
+    color: $neutral-100;
+}
+
+h1 {
+    font-size: 80px;
+    line-height: 96px;
+    letter-spacing: -0.04em;
+    font-weight: 700;
+    #exhibitions & {
+        color: $amethyst-50;
+        grid-column: 1 / 13;
+    }
+    #about & {
+        color: $green-50;
+        grid-column: 1 / 13;
+    }
+    #news & {
+        color: $blue-50;
+        grid-column: 1 / 13;
+    }
+}
+
+h2 {
+    font-size: 64px;
+    line-height: 72px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    #hero & {
+        color: $orange-10;
+    }
+    #exhibitions & {
+        color: $amethyst-90;
+    }
+    #about & {
+        color: $green-90;
+    }
+    #news & {
+        color: $blue-90;
+    }
+}
+
+h3 {
+    font-size: 48px;
+    line-height: 56px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    #exhibitions & {
+        color: $amethyst-90;
+    }
+    #about & {
+        color: $green-90;
+    }
+    #news & {
+        color: $blue-90;
+    }
+}
+
+h4 {
+    font-size: 32px;
+    line-height: 32px;
+    letter-spacing: -0.02em;
+    font-weight: 600;
+    #exhibitions & {
+        color: $amethyst-90;
+    }
+    #about & {
+        color: $green-90;
+    }
+    #news & {
+        color: $blue-90;
+    }
+}
+
+h5 {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    #hero & {
+        color: $orange-10;
+    }
+    #exhibitions & {
+        color: $amethyst-90;
+    }
+    #about & {
+        color: $green-90;
+    }
+    #news & {
+        color: $blue-90;
+    }
+}
+
+h6 {
+    font-size: 20px;
+    line-height: 24px;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+    #exhibitions & {
+        color: $amethyst-90;
+    }
+    #about & {
+        color: $green-90;
+    }
+    #news & {
+        color: $blue-90;
+    }
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.caption{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.opacity-50{
+    opacity: .5;
+}

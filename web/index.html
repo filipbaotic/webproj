@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pavone Art Gallery</title>
+    <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1, minimum-scale=1, maximum-scale=1"
+    />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="assets/logo.png" rel="icon" type="image/png" />
+    <link href="assets/bigger-logo.png" rel="apple-touch-icon" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/redirect.js"></script>
+    <script src="js/nav.js"></script>
+  </head>
+
+  <body>
+    <div class="nav">
+      <div class="nav-container">
+        <a href="#" class="nav-logo"></a>
+        <ul class="nav-links">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#exhibitions">Exhibitions</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#news">News</a></li>
+          <script src="js/logUser.js"></script>
+        </ul>
+      </div>
+    </div>
+
+    <div id="hero">
+      <div class="hero-background"></div>
+      <div class="container container-hero">
+        <div class="left">
+          <div class="pattern"><img src="/assets/hero.jpg" /></div>
+        </div>
+        <div class="right">
+          <h5>Currently displaying</h5>
+          <h2 class="uppercase">Takashi Murakami</h2>
+          <div class="hero-button-spacing">
+            <a class="button" href="#exhibitions">Explore exhibitions</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="exhibitions">
+      <div class="container container-exhibitions">
+        <h1>Exhibitions</h1>
+        <div class="exhibition">
+          <div class="column-date">Date</div>
+          <div class="column-author">Author</div>
+          <div class="column-tickets"></div>
+        </div>
+        <script src="js/getExhibitions.js"></script>
+      </div>
+    </div>
+
+    <div id="about">
+      <div class="container container-about">
+        <h1>About</h1>
+        <div class="left">
+          <p>
+            Pavone Art Gallery is home to many world-known historical and
+            contemporary artists. It's the place where everyone can discover and
+            experience modern and contemporary visual art and design. We explore
+            complex topics of yesterday, today and tomorrow. This vision is
+            guided by a fresh, energetic approach to displaying, caring for and
+            renewing our world-famous collection.
+          </p>
+          <p>We build memories for the future.</p>
+          <div class="about-button-spacing">
+            <a class="button">Learn more</a>
+          </div>
+          <div class="pattern"><img src="/assets/about.jpg" /></div>
+        </div>
+        <div class="right">
+          <h5>Rue de la Régence 55</h5>
+          <h5>1000 Bruxelles</h5>
+          <h5>Belgium</h5>
+          <div class="map"></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="news">
+      <div class="container container-news">
+        <h1>News</h1>
+        <div class="blog-item">
+          <img src="/assets/blog-koons.jpg" />
+          <div class="datetime">
+            <div class="caption opacity-50">14 October 2022</div>
+            <h4>Jeff Koons: Lost in America</h4>
+          </div>
+          <p>
+            Lost in America presents a portrait of American culture as seen
+            through Koons' autobiography, beginning with his childhood in
+            suburban Pennsylvania.
+          </p>
+          <div><a class="button small">Learn more</a></div>
+        </div>
+        <div class="blog-item">
+          <img src="/assets/blog-vangogh.jpg" />
+          <div class="datetime">
+            <div class="caption opacity-50">09 September 2022</div>
+            <h4>
+              Van Gogh: The Immersive Experience coming to Pavone Art Gallery
+            </h4>
+          </div>
+          <p>
+            Visitors discover more than 200 of Van Gogh's paintings, including
+            his most famous works, painted between 1888 and 1890 in Provence,
+            Arles and Auvers-sur-Oise.
+          </p>
+          <div><a class="button small">Learn more</a></div>
+        </div>
+        <div class="blog-item">
+          <img src="/assets/blog-opening.jpg" />
+          <div class="datetime">
+            <div class="caption opacity-50">26 August 2022</div>
+            <h4>We are ready for The Grand Opening</h4>
+          </div>
+          <p>
+            We are opening our doors on September 23rd at 16:00. The opening
+            exhibit will highlight the works of twelve Belgian contemporary
+            artists.
+          </p>
+          <div><a class="button small">Learn more</a></div>
+        </div>
+        <div class="news-button"><a class="button">See more</a></div>
+      </div>
+    </div>
+
+    <div id="footer">
+      <div class="container container-footer">
+        <div class="footer-column col1">
+          <div class="title">Follow us</div>
+          <div><a href="">Facebook</a></div>
+          <div><a href="">Twitter</a></div>
+          <div><a href="">Instagram</a></div>
+          <div><a href="">YouTube</a></div>
+        </div>
+        <div class="footer-column col2">
+          <div class="title">Contact</div>
+          <div>+32 2 323 232</div>
+          <div>hello@pag.com</div>
+        </div>
+        <div class="footer-column col3">
+          <div class="title">Location</div>
+          <div>Rue de la Régence 55</div>
+          <div>1000 Bruxelles</div>
+          <div>Belgium</div>
+        </div>
+        <div class="f_links">
+          <div>© Pavone Art Gallery 2022</div>
+          <a href="">Terms & Conditions</a>
+          <a href="">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

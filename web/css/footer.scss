@@ -1,0 +1,60 @@
+@import 'colors';
+
+#footer {
+    background-color: $blue-90;
+}
+
+.container-footer{
+    padding: 40px 32px 16px;
+    grid-row-gap: 40px;
+}
+
+.footer-column{  
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    color: $blue-footer;
+    & a{
+    color: $blue-footer;
+    text-decoration: underline;
+    }
+    & .title{
+        color: $blue-10;
+        font-weight: 600;
+        margin-bottom: 16px;
+    }
+}
+
+.col1{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+.col2{
+    grid-column-start: 4;
+    grid-column-end: 7;
+}
+
+.col3{
+    grid-column-start: 7;
+    grid-column-end: 10;
+}
+
+.f_links{
+    grid-column-start: 1;
+    grid-column-end: 13;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 16px;
+    padding-top: 16px;
+    border-top: 1px solid $blue-50;
+    color: $blue-10;
+    & a{
+        color: $blue-10;
+        text-decoration: none;
+    }
+    & div{
+        flex-grow: 1;
+    }
+}

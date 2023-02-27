@@ -1,0 +1,52 @@
+@import 'colors';
+
+.nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    transition-duration: 0.2s;
+    z-index: 10;
+    &-active_exhibitions {
+        background: $bg-amethyst;
+        backdrop-filter: blur(8px);
+    }
+    &-active_about {
+        background: $bg-green;
+        backdrop-filter: blur(8px);
+    }
+    &-active_news {
+        background: $bg-blue;
+        backdrop-filter: blur(8px);
+    }
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1280px;
+    padding: 16px 32px;
+}
+
+.nav-logo {
+    width: 140px;
+    height: 40px;
+    background-image: url(/assets/logo.svg);
+    &::before{
+        display: none!important;
+    }
+}
+
+ul.nav-links {
+    display: flex;
+    gap: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+ul.nav-links li {
+    list-style: none;
+}

@@ -1,0 +1,29 @@
+CREATE TABLE users (
+	user_id serial PRIMARY KEY,
+	first_name VARCHAR(32),
+	last_name VARCHAR(32),
+	password VARCHAR(256) NOT NULL,
+	email text UNIQUE NOT NULL,
+	date_created TIMESTAMP DEFAULT NOW()
+);
+
+CREATE TABLE exhibitions (
+	exhibition_id serial PRIMARY KEY,
+	exhibition_name VARCHAR(32),
+	date_start DATE,
+	date_end DATE,
+	ticket_adult SMALLINT,
+	ticket_student SMALLINT,
+	ticket_child SMALLINT,
+	ticket_senior SMALLINT
+);
+
+CREATE TABLE tickets (
+	ticket_id serial PRIMARY KEY,
+	exhibition SMALLINT,
+	ticket_owner SMALLINT,
+	ticket_adult SMALLINT,
+	ticket_student SMALLINT,
+	ticket_child SMALLINT,
+	ticket_senior SMALLINT
+);
