@@ -13,6 +13,9 @@ getExhibitions();
 
 const listExhibitions = () => {
   let exhibitions = JSON.parse(window.localStorage.getItem("exhibitions"));
+  if (exhibitions == null) {
+    location.reload();
+  }
   exhibitions.forEach((exhibition) => {
     let newStart = new Date(exhibition.date_start);
     let newEnd = new Date(exhibition.date_end);
@@ -29,13 +32,13 @@ const listExhibitions = () => {
       document.write(`<div class="exhibition past">
                   <div class="column-date">${formattedStart} -<br>${formattedEnd}</div>
                   <div class="column-author column-author_artist">${exhibition.exhibition_name}</div>
-                  <div class="column-tickets"><a class="button" href="">Purchase ticket</a></div>
+                  <div class="column-tickets"><a onclick="kupiTikija(${exhibition.exhibition_id})" class="button">Purchase ticket</a></div>
               </div>`);
     } else {
       document.write(`<div class="exhibition">
                 <div class="column-date">${formattedStart} -<br>${formattedEnd}</div>
                 <div class="column-author column-author_artist">${exhibition.exhibition_name}</div>
-                <div class="column-tickets"><a class="button" href="">Purchase ticket</a></div>
+                <div class="column-tickets"><a onclick="kupiTikija(${exhibition.exhibition_id})" class="button">Purchase ticket</a></div>
             </div>`);
     }
   });

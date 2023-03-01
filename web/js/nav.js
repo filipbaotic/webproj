@@ -36,6 +36,7 @@ $(window).on("scroll", function () {
 });
 
 const Logout = async () => {
+  localStorage.clear();
   document.cookie = "isLoggedIn=;max-age=0";
   history.pushState({}, "", "/");
   location.reload();
