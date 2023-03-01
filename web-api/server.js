@@ -9,9 +9,9 @@ const db = knex({
   connection: {
     host: "127.0.0.1",
     port: 5432,
-    user: "fbaotic",
-    password: "",
-    database: "postgres",
+    user: "root",
+    password: "pass",
+    database: "filipov_projekt",
   },
 });
 
@@ -75,18 +75,21 @@ app.post("/register", async (req, res) => {
 });
 
 app.get("/getExhibitions", async (req, res) => {
-  db.select("exhibition_id", "exhibition_name", "date_start", "date_end")
+  await db
+    .select("exhibition_id", "exhibition_name", "date_start", "date_end")
     .from("exhibitions")
     .then(async (data) => {
       res.json(data);
     });
 });
 
-app.post("/getTicket", async (req, res) => {
+app.post("/getTicketsById", async (req, res) => {
   const { user_id } = req.body;
-  db.select("ticket_id", "exhibition", "ticket_owner")
+  await db
+    .select("tickets.*", "exhibitions.exhibition_name")
     .from("tickets")
-    .where("ticket_owner", "=", user_id)
+    .leftJoin("exhibitions", "tickets.exhibition", "exhibitions.exhibition_id")
+    .where("tickets.ticket_owner", "=", user_id)
     .then(async (data) => {
       res.json(data);
     });

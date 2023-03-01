@@ -12,18 +12,11 @@ CREATE TABLE exhibitions (
 	exhibition_name VARCHAR(32),
 	date_start DATE,
 	date_end DATE,
-	ticket_adult SMALLINT,
-	ticket_student SMALLINT,
-	ticket_child SMALLINT,
-	ticket_senior SMALLINT
 );
 
 CREATE TABLE tickets (
 	ticket_id serial PRIMARY KEY,
 	exhibition SMALLINT,
 	ticket_owner SMALLINT,
-	ticket_adult SMALLINT,
-	ticket_student SMALLINT,
-	ticket_child SMALLINT,
-	ticket_senior SMALLINT
+	time_of_purchase TIMESTAMP DEFAULT NOW()
 );
