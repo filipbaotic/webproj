@@ -20,6 +20,7 @@ const Login = async () => {
     history.pushState({}, "", "/profile.html");
     location.reload();
     console.log("Logged in successfully");
+    location.reload();
   } else {
     document.cookie = "isLoggedIn=";
     alert("Email or password incorrect");

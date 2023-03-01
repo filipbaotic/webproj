@@ -1,6 +1,6 @@
 // redirects from profile to login, if the user is not logged in
 if (window.location.pathname == "/profile.html" && document.cookie == "") {
-  history.pushState({}, "", "/login.html");
+  history.pushState({}, "", "./login.html");
   location.reload();
 }
 
@@ -10,6 +10,6 @@ if (
     window.location.pathname == "/register.html") &&
   document.cookie == "isLoggedIn=true"
 ) {
-  history.pushState({}, "", "/profile.html");
+  history.pushState({}, "", "./profile.html");
   location.reload();
 }
